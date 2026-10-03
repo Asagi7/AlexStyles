@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Alex Styles - Portfolio. Front-end developer." />
+<title>Alex Styles | Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<nav class="nav" aria-label="Main navigation">
+<a class="logo" href="#home">AS</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+</nav>
+</header>
+<main id="main">
+<section id="home" class="hero">
+<div class="hero-text">
+<p class="eyebrow">Hello, I'm</p>
+<h1>Alex Styles</h1>
+<p class="subtitle">Front-End Developer crafting polished, responsive interfaces.</p>
+<div class="hero-buttons">
+<a class="btn" href="#work">View Work</a>
+<a class="btn btn-outline" href="#contact">Hire Me</a>
+</div>
+</div>
+<div class="hero-card">
+<img src="https://via.placeholder.com/360x360.png?text=Alex+Styles" alt="Portrait placeholder of Alex Styles" width="360" height="360" />
+</div>
+</section>
+<section id="about" class="section">
+<h2>About</h2>
+<p>I specialize in semantic HTML, modern CSS, and accessible responsive design. This site was styled with Microsoft Copilot suggestions and refined by hand.</p>
+</section>
+<section id="work" class="section">
+<h2>Selected Work</h2>
+<div class="work-grid">
+<article class="work-card" data-title="Aurora Dashboard" data-desc="Analytics dashboard with CSS grid, dark mode, and chart tooltips.">
+<img src="https://via.placeholder.com/600x340.png?text=Aurora" alt="Screenshot placeholder of Aurora dashboard project" loading="lazy" />
+<h3>Aurora Dashboard</h3>
+<p>Grid layout, theme tokens, tooltip details.</p>
+<button class="btn btn-small open-modal" data-tip="Click to preview Aurora">Preview</button>
+<span class="tooltip" data-tip="Grid + CSS variables">ⓘ</span>
+</article>
+<article class="work-card" data-title="Nimbus Shop" data-desc="E-commerce UI with responsive product grid and hover quick-view.">
+<img src="https://via.placeholder.com/600x340.png?text=Nimbus" alt="Screenshot placeholder of Nimbus shop project" loading="lazy" />
+<h3>Nimbus Shop</h3>
+<p>Responsive cards, hover zoom, modal quick-view.</p>
+<button class="btn btn-small open-modal" data-tip="Click to preview Nimbus">Preview</button>
+<span class="tooltip" data-tip="Hover cards to zoom">ⓘ</span>
+</article>
+<article class="work-card" data-title="Pulse Blog" data-desc="Editorial layout with fluid type using clamp and elegant spacing.">
+<img src="https://via.placeholder.com/600x340.png?text=Pulse" alt="Screenshot placeholder of Pulse blog project" loading="lazy" />
+<h3>Pulse Blog</h3>
+<p>Fluid typography, refined spacing scale.</p>
+<button class="btn btn-small open-modal" data-tip="Click to preview Pulse">Preview</button>
+<span class="tooltip" data-tip="clamp() typography">ⓘ</span>
+</article>
+</div>
+</section>
+<section id="contact" class="section">
+<h2>Contact</h2>
+<form id="contactForm" novalidate>
+<label for="name">Name</label>
+<input id="name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Your name" />
+<label for="email">Email</label>
+<input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="4" required minlength="10" placeholder="Say hello..."></textarea>
+<p class="form-error" id="formError" role="alert"></p>
+<p class="form-success" id="formSuccess" role="status"></p>
+<button class="btn" type="submit" data-tip="Validated with JavaScript">Send</button>
+</form>
+</section>
+</main>
+<footer class="site-footer">
+<p>&copy; <span id="year"></span> Alex Styles.</p>
+</footer>
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<h3 id="modalTitle">Preview</h3>
+<p id="modalDesc"></p>
+<button class="btn" id="modalClose">Close</button>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
